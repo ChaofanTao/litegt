@@ -1,0 +1,18 @@
+#common
+**/*.DS_Store
+**/*.ipynb_checkpoints/
+**/__pycache__
+out/
+
+gmail.py
+
+#SBM datasets
+data/SBMs/*.pkl
+data/SBMs/*.pth
+
+#TSP dataset
+data/TSP/*.pkl
+data/TSP/*.pth
+
+dataset/
+
