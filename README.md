@@ -46,9 +46,9 @@ This project is based on the [benchmarking-gnns](https://github.com/graphdeeplea
 
 ## 4. Citation
 ```
-@article{chen2021litegt,
+@inproceedings{chen2021litegt,
   title={LiteGT: Efficient and Lightweight Graph Transformers},
-  author={Chen Cong, Tao Chaofan, Wong, Ngai},
+  author={Chen, Cong and Tao, Chaofan and Wong, Ngai},
   journal={The Conference on Information and Knowledge Management (CIKM)},
   year={2021}
 }
