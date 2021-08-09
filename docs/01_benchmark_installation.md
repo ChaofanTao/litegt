@@ -30,7 +30,7 @@ source ~/.bash_profile    # For OSX
 ```
 # Clone GitHub repo
 conda install git
-git clone https://github.com/ChaofanTao/Efficient_Graph.git
+git clone https://github.com/ChaofanTao/litegt.git
 cd Efficient_Graph
 
 # Install python environment
