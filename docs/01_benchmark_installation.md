@@ -31,7 +31,7 @@ source ~/.bash_profile    # For OSX
 # Clone GitHub repo
 conda install git
 git clone https://github.com/ChaofanTao/litegt.git
-cd Efficient_Graph
+cd litegt
 
 # Install python environment
 conda env create -f environment_cpu.yml   
@@ -65,8 +65,8 @@ cat /usr/local/cuda/version.txt # Check CUDA version is 10.2
 
 # Clone GitHub repo
 conda install git
-git clone https://github.com/ChaofanTao/Efficient_Graph.git
-cd Efficient_Graph
+git clone https://github.com/ChaofanTao/litegt.git
+cd litegt
 
 # Install python environment
 conda env create -f environment_gpu.yml 
