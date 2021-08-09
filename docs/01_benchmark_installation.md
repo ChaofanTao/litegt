@@ -6,7 +6,7 @@
 
 NOTE: If you have downloaded gpu-version pytorch before, you just need to install some small libraries.
 ```
-pip install dgl tqdm numpy scikit-learn scikit-image networkx tensorboard tensorboardx
+pip install dgl tqdm numpy scikit-learn scikit-image networkx tensorboard tensorboardx protobuf
 ```
 Make sure that your CUDA, [dgl](https://www.dgl.ai/pages/start.html), [pytorch](https://pytorch.org/) use compatible versions. Use ```cat /usr/local/cuda/version.txt``` to check CUDA version. We use ```CUDA=11.0, dgl=0.6.0.post1, pytorch=1.7.0+cu110``` and run on NVIDIA-3090 cards.
 
