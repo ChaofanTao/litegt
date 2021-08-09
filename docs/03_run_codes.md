@@ -8,12 +8,16 @@
 
 <br>
 
-### In terminal
+### In terminal, e.g. use TSP dataset
 
 ```
 # Run the main file (at the root of the project)
-python main_TSP_edge_classification.py --dataset TSP  --log_path './logs/result_log`'   --config 'configs/TSP_LiteGT.json' # for CPU
-python main_TSP_edge_classification.py --dataset TSP  --log_path './logs/result_log`'   --config 'configs/TSP_LiteGT.json' --gpu_id 0 # for GPU
+
+# for CPU
+python main_TSP_edge_classification.py --dataset TSP  --log_path './logs/result_log`'   --config 'configs/TSP_LiteGT.json' 
+
+# for GPU
+python main_TSP_edge_classification.py --dataset TSP  --log_path './logs/result_log`'   --config 'configs/TSP_LiteGT.json' --gpu_id 0 
 ```
 The training and network parameters for each experiment is stored in a json file in the [`configs/`](../configs) directory.
 

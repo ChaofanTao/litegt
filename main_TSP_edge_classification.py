@@ -83,7 +83,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
         mode = 'w'
  
     # load the processed data, which include lapician position encoding, jaccard similarity
-    data_dir = '/home/cchen/Efficient_Graph/data/TSP/processed_TSP_data.pth'
+    data_dir = './data/TSP/processed_TSP_data.pth'
     TSPdata = torch.load(data_dir) 
     dataset = TSPdata['dataset']  
 

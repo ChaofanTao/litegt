@@ -89,9 +89,9 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
 
     # load the processed data, which include lapician position encoding, jaccard similarity
     if DATASET_NAME == 'SBM_PATTERN':
-        data_dir = '/home/cchen/Efficient_Graph/data/SBMs/processed_PATTERN_data.pth'
+        data_dir = './data/SBMs/processed_PATTERN_data.pth'
     elif DATASET_NAME == 'SBM_CLUSTER':
-        data_dir = '/home/cchen/Efficient_Graph/data/SBMs/processed_CLUSTER_data.pth'
+        data_dir = './data/SBMs/processed_CLUSTER_data.pth'
 
     SBMdata = torch.load(data_dir) 
     dataset = SBMdata['dataset']  
@@ -376,8 +376,7 @@ if __name__ == "__main__":
     if net_params['jaccard_sparse']:
         net_params['double_sparse'] = True
 
-    import pdb
-    pdb.set_trace()
+
     
       
     # SBM

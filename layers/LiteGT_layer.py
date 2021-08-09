@@ -222,8 +222,6 @@ class LiteGTLayer(nn.Module):
 
         self.reset_parameters()
         if self.dim_reduce:
-            # import pdb
-            # pdb.set_trace()
             self.hidden_pool = nn.Linear(ori_hidden_dim, in_dim)
 
     def reset_parameters(self):

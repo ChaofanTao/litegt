@@ -163,7 +163,6 @@ def jaccard_similarity(jaccard, neighbor_num, in_edges):
     return func
 
 def compute_jaccard_similarity(g):
-    # pdb.set_trace()
     g.ndata['id'] = F.one_hot(g.nodes(), g.num_nodes()).float()
     g.ndata['in_degree'] = g.in_degrees().float()
     eids = g.edges()
@@ -204,8 +203,7 @@ class TSPDataset(torch.utils.data.Dataset):
         start = time.time()
         print("[I] Loading dataset %s..." % (name))
         self.name = name
-        # data_dir = './data/TSP/'
-        data_dir = '/home/cchen/Efficient_Graph/data/TSP/'
+        data_dir = './data/TSP/'
         try:
             with open(data_dir+name+'.pkl',"rb") as f:
                 f = pickle.load(f)
