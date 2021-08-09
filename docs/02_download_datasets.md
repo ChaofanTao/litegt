@@ -38,6 +38,10 @@ cd data/
 bash script_download_all_datasets.sh
 ```
 
-Script [script_download_all_datasets.sh](../data/script_download_all_datasets.sh) is located here. 
-
+Script [script_download_all_datasets.sh](../data/script_download_all_datasets.sh) is located here.
+NOTE： We also provide pre-processed data in Goolge drive in the download script.  <br>
+[processed_CLUSTER_data.pth](https://drive.google.com/u/1/uc?export=download&confirm=o8r0&id=1yMPVq6cysiddGznYWJy2Z73mWRwoBe4d) <br>
+[processed_PATTERN_data.pth](https://drive.google.com/u/1/uc?export=download&confirm=sGyR&id=1WFvuQXXnzsH_XQwFfQ2MHFuYjTYmG48W) <br>
+[processed_TSP_data.pth](https://drive.google.com/u/1/uc?export=download&confirm=mOyO&id=1xSA7487npv7q9FgxZKNUvd_VOOyChiDH)
+  
 <br><br><br>
