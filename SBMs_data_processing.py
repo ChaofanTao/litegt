@@ -7,7 +7,10 @@ def preprocessing_data(DATASET_NAME):
     # add laplacian positional encoding
     st = time.time()
     print("[!] Adding Laplacian positional encoding.")
-    dataset._add_laplacian_positional_encodings(10) # net_params['pos_enc_dim'] = 10
+    if DATASET_NAME == 'SBM_PATTERN':
+       dataset._add_laplacian_positional_encodings(2) # net_params['pos_enc_dim'] = 2
+    else: 
+        dataset._add_laplacian_positional_encodings(10) # net_params['pos_enc_dim'] = 10
     print('Time LapPE:{}'.format(time.time()-st))
 
     # add jaccard similarity
