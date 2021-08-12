@@ -45,7 +45,7 @@ cd litegt
 conda env create -f environment_cpu.yml   
 
 # Activate environment
-conda activate graph_transformer
+conda activate LiteGT
 ```
 
 
@@ -79,7 +79,7 @@ cd litegt
 conda env create -f environment_gpu.yml 
 
 # Activate environment
-conda activate graph_transformer
+conda activate LiteGT
 ```
 
 

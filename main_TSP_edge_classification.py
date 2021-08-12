@@ -82,7 +82,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
     else:
         mode = 'w'
  
-    # load the processed data, which include lapician position encoding, jaccard similarity
+    # load the processed data, which includes lapician position encoding, jaccard similarity
     data_dir = './data/TSP/processed_TSP_data.pth'
     TSPdata = torch.load(data_dir) 
     dataset = TSPdata['dataset']  
@@ -92,7 +92,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
     root_log_dir, root_ckpt_dir, write_file_name, write_config_file = dirs
     device = net_params['device']
     
-    # Write the network and optimization hyper-parameters in folder config/
+    # write the network and optimization hyper-parameters in folder config/
     with open(write_config_file + '.txt', mode) as f:
         f.write("""Dataset: {},\nModel: {}\n\nparams={}\n\nnet_params={}\n\n\nTotal Parameters: {}\n\n"""                .format(DATASET_NAME, MODEL_NAME, params, net_params, net_params['total_param']))
         
@@ -153,7 +153,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
         epoch_list = checkpoint['epoch_list']
         per_epoch_time = checkpoint['per_epoch_time']
 
-    # At any point you can hit Ctrl + C to break out of training early.
+    # at any point you can hit Ctrl + C to break out of training early.
     try:
         with tqdm(range(start_epoch+1, params['epochs'])) as t:
             for epoch in t:
@@ -197,7 +197,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
                 per_epoch_time.append(time.time()-start)
 
                 scheduler.step(epoch_val_loss)
-                # Saving checkpoint
+                # saving checkpoint
                 checkpoint = {
                         "net": model.state_dict(),
                         'optimizer':optimizer.state_dict(),

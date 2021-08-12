@@ -87,7 +87,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
     else:
         mode = 'w'
 
-    # load the processed data, which include lapician position encoding, jaccard similarity
+    # load the processed data, which includes lapician position encoding, jaccard similarity
     if DATASET_NAME == 'SBM_PATTERN':
         data_dir = './data/SBMs/processed_PATTERN_data.pth'
     elif DATASET_NAME == 'SBM_CLUSTER':
@@ -101,7 +101,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
     root_log_dir, root_ckpt_dir, write_file_name, write_config_file, out_dir = dirs
     device = net_params['device']
 
-    # Write network and optimization hyper-parameters in folder config/
+    # write network and optimization hyper-parameters in folder config/
     with open(write_config_file + '.txt', mode) as f:
         f.write("""Dataset: {},\nModel: {}\n\nparams={}\n\nnet_params={}\n\n\nTotal Parameters: {}\n\n"""                .format(DATASET_NAME, MODEL_NAME, params, net_params, net_params['total_param']))
         
@@ -163,7 +163,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
         epoch_list = checkpoint['epoch_list']
         per_epoch_time = checkpoint['per_epoch_time']
 
-    # At any point you can hit Ctrl + C to break out of training early.
+    # at any point you can hit Ctrl + C to break out of training early.
     try:
         with tqdm(range(start_epoch+1, params['epochs'])) as t:
             for epoch in t:
@@ -206,7 +206,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
                 
                 scheduler.step(epoch_val_loss)
 
-                # Saving checkpoint
+                # saving checkpoint
                 checkpoint = {
                         "net": model.state_dict(),
                         'optimizer':optimizer.state_dict(),
@@ -226,7 +226,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
                     logging.info("\n!! LR SMALLER OR EQUAL TO MIN LR THRESHOLD.")
                     break
                     
-                # Stop training after params['max_time'] hours
+                # stop training after params['max_time'] hours
                 if time.time()-start0 > params['max_time']*3600:
                     logging.info('-' * 89)
                     logging.info("Max_time for training elapsed {:.2f} hours, so stopping".format(params['max_time']))
