@@ -292,7 +292,7 @@ if __name__ == "__main__":
     parser.add_argument('--out_dir', type=str, default="out/SBMs/", help="Please give a value for out_dir")
     parser.add_argument('--seed', type=int, default=41, help="Please give a value for seed")
     parser.add_argument('--epochs', type=int, default=1000, help="Please give a value for epochs")
-    parser.add_argument('--batch_size', type=int, default=32, help="Please give a value for batch_size")
+    parser.add_argument('--batch_size', type=int, default=128, help="Please give a value for batch_size")
     parser.add_argument('--init_lr', type=float, default=0.0005, help="Please give a value for init_lr")
     parser.add_argument('--lr_reduce_factor', type=float, default=0.5, help="Please give a value for lr_reduce_factor")
     parser.add_argument('--lr_schedule_patience', type=int, default=10, help="Please give a value for lr_schedule_patience")
