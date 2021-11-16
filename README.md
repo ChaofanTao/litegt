@@ -2,7 +2,7 @@
 
 # [CIKM-2021] LiteGT: Efficient and Lightweight Graph Transformers
 
-Source code for the paper "[LiteGT: Efficient and Lightweight Graph Transformers]".
+Source code for the paper "[LiteGT: Efficient and Lightweight Graph Transformers](https://dl.acm.org/doi/pdf/10.1145/3459637.3482272)".
 
 We propose a three-level efficient graph transformer architecture called  **LiteGT** to learn on arbitrary graphs, which saves computation, memory and model size altogether. 
 
